@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   end
   
   def court #재판소 페이지
+    @courts = Court.all
   end
   
   def court_new #재판소 글올리기
@@ -10,4 +11,5 @@ class HomeController < ApplicationController
   
   def court_create #재판소 글 DB 등록
   end
+  
 end

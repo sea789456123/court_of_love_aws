@@ -1,0 +1,16 @@
+
+  /*폰트 :나눔바른펜*/
+  @font-face { font-family: 'NanumBarunpen'; 
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff')
+  format('woff'); font-weight: normal; font-style: normal; }
+  
+   /*폰트 :야놀자체*/
+  @font-face { font-family: 'YanoljaYacheR'; 
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/YanoljaYacheR.woff') 
+  format('woff'); font-weight: normal; font-style: normal; }
+
+  /*전체적용 글씨체*/
+  body *{ 
+    font-family:'NanumBarunpen';}
+
+  
