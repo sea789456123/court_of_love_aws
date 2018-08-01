@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get 'home/court'
   get 'home/court_new'
+  get 'home/detail/:c_id'=> 'home#detail'
   #get 'home/court_create'
 
   # The priority is based upon order of creation: first created -> highest priority.
