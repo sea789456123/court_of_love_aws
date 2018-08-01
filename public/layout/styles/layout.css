@@ -75,6 +75,7 @@ File: Layout CSS
 .services article .heading{margin-bottom:10px; font-size:1.2rem; text-transform:uppercase;}
 .services article p{margin-bottom:10px;}
 
+
 .elements{margin-bottom:50px;}
 .elements li{}
 .elements li:nth-child(-n+3){}
@@ -353,11 +354,7 @@ tr:nth-child(even), #comments li:nth-child(even){color:inherit; background-color
 table a, #comments a{background-color:inherit;}
 
 
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
+
 
 
 /* Media Queries
@@ -438,4 +435,12 @@ table a, #comments a{background-color:inherit;}
 	.font-x3{font-size:1.6rem;}
 
 	#header #quickinfo li{display:block; margin-right:0;}
+}
+
+
+/*홈 소개 배경사진*/
+element.style {
+    background-image: url(/images/basicbackground.png);
+    background-size:auto;
+    background-color:#171717;
 }
