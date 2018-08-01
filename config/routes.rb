@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'home/court'
-  get 'home/court_new'
+  get 'home/new'
   get 'home/detail/:c_id'=> 'home#detail'
   #get 'home/court_create'
 
