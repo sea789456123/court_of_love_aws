@@ -1,12 +1,13 @@
 <div class="wrapper row3">
   <footer id="footer" class="hoc clear">
     <div class="one_third">
+     
       <h6 class="title">재판소 신청</h6>
-      <p class="btmspace-30">Eget turpis cras cursus dolor sit amet lectus pretium ut consequat.</p>
+      <p class="btmspace-30"></p></p>
       <form method="post" action="#">
         <fieldset>
-          <label>1. 사건번호: 22<!--court.id--></label>
-          <label>2. 원고(의뢰인): nickname<!--court.nickname--></label>
+          <label>1. 사건번호: 22</label>
+          <label>2. 원고(의뢰인): <%= @a_view.nickname %><!--court.nickname--></label>
           <label>3. 제목</label>
           <input class="btmspace-15" type="text">
           <label>4. 재판내용</label>
@@ -16,6 +17,7 @@
           <button type="submit" value="submit">Submit</button>
         </fieldset>
       </form>
+      
     </div>
   </footer>
 </div>

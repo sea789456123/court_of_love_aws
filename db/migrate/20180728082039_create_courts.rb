@@ -3,8 +3,8 @@ class CreateCourts < ActiveRecord::Migration
     create_table :courts do |t|
       t.string :nickname
       t.string :title
-      t.text :content
       t.integer :series
+      t.text :content
       t.string :category
       t.string :hashtag
       t.string :start_date

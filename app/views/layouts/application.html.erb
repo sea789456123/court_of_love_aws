@@ -11,8 +11,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
   
-  <!-- Custom styles for this template -->
+   <!--Custom styles for this template -->
   <link href="/layout/styles/index.css" rel="stylesheet">
+  
+  <!-- 합쳐지고 최소화된 최신 CSS -->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">-->
+
+<!-- 부가적인 테마 -->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">-->
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  
+  
   
   
 </head>
@@ -27,8 +38,14 @@
       </div>
       <div id="quickinfo" class="fl_right">
         <ul class="nospace inline">
-          <li><strong>MyPage</strong></li>
-          <li><strong><i class="fa fa-user"></i> Login</strong></li>
+          <% if user_signed_in? %>
+            <%= current_user.email %>님 환영
+            <a><strong>MyPage</strong></a>
+            <a href="/users/sign_in"><strong><i class="fa fa-user"></i> Logout</strong></a>
+          <% else %>
+            <a href="/users/sign_in"><strong><i class="fa fa-user"></i> Login</strong></a>
+          <% end %>
+         
         </ul>
       </div>
     </header>
