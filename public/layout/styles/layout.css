@@ -60,7 +60,7 @@ File: Layout CSS
 
 /* Content Area
 --------------------------------------------------------------------------------------------------------------- */
-.container{padding:80px 0;}
+.container{padding:3rem;}
 
 /* Content */
 .container .content{}
@@ -266,7 +266,11 @@ td{border-width:0 1px;}
 
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
+<<<<<<< HEAD
 body{color:#888888; }
+=======
+body{color:#888888;}
+>>>>>>> 894cc512e047ca85a3aa3ec1d04967440e271f11
 a{color:#E9365A;}
 a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
 hr, .borderedbox{border-color:#D7D7D7;}
@@ -443,4 +447,10 @@ element.style {
     background-image: url(/images/basicbackground.png);
     background-size:auto;
     background-color:#171717;
+}
+
+/*폼 테두리*/
+div.f_border{
+	margin:3rem 10rem;
+	border: 5px double #E9365A;
 }
