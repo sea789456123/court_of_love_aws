@@ -2,13 +2,19 @@
 <html>
   <head>
     <link href="/layout/styles/court.css" rel="stylesheet" type="text/css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+
   </head>
   <body>
     <div class="wrapper row3">
       <div class="hoc container clear">
         <div class="center btmspace-50">
-          <h3 class="font-x2 nospace">가장 핫한 재판!!!</h3>
-          <p class="nospace"> <a href="#"></a></p>
+
+  
+
+          <h3 class="font-x2 nospace">
+          <i class="fa fa-hotjar"></i>핫한 게시글</h3>
+          <p class="nospace"><a href="#">연애상담고수님들</a> 빨리 오세요.</p>
         </div>
         <div class="group">
         <% @courts.each do |c| %>
@@ -42,10 +48,19 @@
             <p><%=c.hashtag %></p>
             <p class="nospace"><a href="/home/detail/<%=c.id%>">Read More &raquo;</a></p>
           </article>
+<<<<<<< HEAD
+        <%end%>
+
+        </div>
+      </div>
+      <div class="border1"></div>
+      
+=======
           <%end%>
         </div>
         </div>
         
+>>>>>>> e5dd6b5650658a95b2a46f8a191200c2b6167db0
       <div>
         <a href="/home/new"><button>등록하기</button></a>
       </div>
