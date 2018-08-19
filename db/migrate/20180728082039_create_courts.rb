@@ -11,6 +11,7 @@ class CreateCourts < ActiveRecord::Migration
       t.integer :end_hour
       t.integer :agree_num
       t.integer :disagree_num
+      t.integer :click_num
       t.timestamps null: false
     end
   end

@@ -12,6 +12,9 @@ class HomeController < ApplicationController
     else
       @c_id = Court.last.id+1;
     end
+
+   
+    
   end
   
   def create #재판소 글 DB 등록
@@ -44,10 +47,7 @@ class HomeController < ApplicationController
   end
   
   def detail #재판소 글 상세보기
-    @view = params[:c_id]
-    @a_view = Court.find(@view)
-    
-    @a_view = Court.find(params[:c_id])
+ @courts = Court.all
     
   end
 end
