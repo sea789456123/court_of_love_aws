@@ -6,3 +6,36 @@
 .first{
     margin-left: 1rem;
 }
+
+/* 이미지 위에 찬/반 수 띄우기 */
+h1.an, h1.dn {
+    position: relative;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    border: 1px solid hotpink;
+    border-radius: 10px;
+    height: 2.5rem;
+    padding: 0 0.5rem;
+    background-color: hotpink;
+}
+
+h1.awin {
+    top: 60px;
+    left: 115px;
+}
+
+h1.alose {
+    top: 40px;
+    left: 115px;
+}
+
+h1.dlose {
+    top: 40px;
+    left: 250px;
+}
+
+h1.dwin {
+    top: 60px;
+    left: 250px;
+}

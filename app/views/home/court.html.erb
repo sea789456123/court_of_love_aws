@@ -12,6 +12,19 @@
         </div>
         <div class="group">
         <% @courts.each do |c| %>
+          <script>
+            var a = document.getElementById("an");
+            var d = document.getElementById("dn");
+            if( <%= c.agree_num %> > <%= c.disagree_num %>) {
+              a.className += " awin";
+              d.className += " dlose";
+            } else if(<%= c.agree_num %> < <%= c.disagree_num %>){
+              a.className += " alose";
+              d.className += " dwin";
+            }
+          </script>
+          <h1 class="an" id="an"><%= c.agree_num %></h1>
+          <h1 class="dn" id="dn"><%= c.disagree_num %></h1>
         <% if c.agree_num > c.disagree_num %>
           <article class="one_third first"><a href="#"><img class="btmspace-30" src="/images/agree.png" alt=""></a>
         <%else%>
