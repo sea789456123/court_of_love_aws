@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20180812075612) do
     t.integer  "end_hour"
     t.integer  "agree_num"
     t.integer  "disagree_num"
+    t.integer  "click_num"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end

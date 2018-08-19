@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+
   devise_for :users
   root 'home#index'
 
   get 'home/court'
-  get 'home/new'
+  get 'home/new' 
   get 'home/detail/:c_id'=> 'home#detail'
   post 'home/create'
 

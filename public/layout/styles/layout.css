@@ -265,8 +265,16 @@ td{border-width:0 1px;}
 
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
+<<<<<<< HEAD
 body{color:#888888;
 	background-color:white;}
+=======
+<<<<<<< HEAD
+body{color:#888888; }
+=======
+body{color:#888888;}
+>>>>>>> 894cc512e047ca85a3aa3ec1d04967440e271f11
+>>>>>>> e5dd6b5650658a95b2a46f8a191200c2b6167db0
 a{color:#E9365A;}
 a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
 hr, .borderedbox{border-color:#D7D7D7;}

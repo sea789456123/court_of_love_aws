@@ -21,7 +21,7 @@
 
   <body>
 
-
+<% @courts.each do |c| %>
     <!-- Page Content -->
     <div class="container" style="margin-left:10rem; margin-right:10rem; padding:50px;" >
     
@@ -33,6 +33,7 @@
 
           <!-- Title -->
          
+<<<<<<< HEAD
           <h1>Post Title</h1>&nbsp&nbsp&nbsp<i class="fa fa-tag"></i> <%=@a_view.category %>    
           <hr>       
           <!-- Author -->
@@ -40,12 +41,19 @@
             
           <!--<h3 class="mt-4">해쉬태그</h3>-->
             #<a href="#">연애</a>
+=======
+          <h1 style="padding-right: flex"><%=c.title%></h1></br> 닉네임 : <%=c.nickname %> &emsp; category : <%= c.category %> &emsp; series : <%= c.series %> 
+          <hr>       
+          <!-- Author -->
+          <p class="lead">
+            <%=c.category %>
+>>>>>>> e5dd6b5650658a95b2a46f8a191200c2b6167db0
           </p>
 
           <!--<hr>-->
 
           <!-- Date/Time -->
-          <p>Posted on January 1, 2018 at 12:00 PM</p>
+          <p>재판기간 :<%=c.end_date%> <%=c.end_hour%></p>
 
           <hr>
           
@@ -53,6 +61,7 @@
           <p class="lead">게시글내용 :안녕하세요.</p>
 
           <!-- Preview Image -->
+<<<<<<< HEAD
           <img class="img-fluid rounded" src="/images/disagree.png" style="vertical-align:middle;" alt="">
     
           <hr>
@@ -68,6 +77,19 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
+=======
+          <div style="margin:flex">
+            <% if c.agree_num > c.disagree_num %>
+              <article class="one_third first" style="margin-left: auto; margin-right: auto; display: block"><a href="#"><img class="btmspace-30" src="/images/agree.png" alt=""></a>
+            <%else%>
+              <article class="one_third first" style="text-align: center"><a href="#"><img class="btmspace-30" src="/images/disagree.png" alt=""></a>
+            <%end%>
+          </div>
+          <hr>
+
+          <!-- Post Content -->
+          <p class="lead"><%=c.content %></p>
+>>>>>>> e5dd6b5650658a95b2a46f8a191200c2b6167db0
 
           <hr>
 
@@ -130,7 +152,7 @@
 
     </div>
     <!-- /.container -->
-
+<%end%>
  
 
     <!-- Bootstrap core JavaScript -->
