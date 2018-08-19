@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'home#index'
 
   get 'home/court'
   get 'home/new'
   get 'home/detail/:c_id'=> 'home#detail'
-  #get 'home/court_create'
+  post 'home/create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,66 @@
+h1.title {
+    border-bottom: 2px solid #E9365A;
+    padding-bottom: 1rem;
+}
+
+h1, .item3 select, .item5 select {
+    margin: 1rem 0px;
+}
+
+input, textarea, .item3 select, .item5 select, .item7 select {
+    border: 1px solid pink;
+    height: 31.33px;
+    border-radius: 5px;
+    padding: 0.4rem;
+}
+
+input:focus {
+    border-bottom: 2px solid #E9365A;
+}
+
+input.item2 {
+    border: none;
+    display: inline-block;
+    padding: 0px;
+    padding-bottom: 0.6rem;
+}
+
+.item3 input {
+    width: 50%;
+}
+
+.item4 textarea, .item6 input {
+    margin-bottom: 1rem;
+}
+
+.item6 input {
+    width: 100%;
+}
+
+div.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.item7 input {
+    width: 10%;
+}
+
+.ui-datepicker-title select {
+    display: inline-block;
+    width: 35% !important;
+    margin: 0 0.5rem !important;
+}
+
+input.submit {
+    font-size: 1.2rem;
+    margin-left: 49.5%;
+    background-color: pink;
+    color: white;
+    cursor: pointer;
+}
+
+input.submit:hover {
+    background-color: #E9365A;
+}

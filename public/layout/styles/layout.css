@@ -60,7 +60,7 @@ File: Layout CSS
 
 /* Content Area
 --------------------------------------------------------------------------------------------------------------- */
-.container{padding:80px 0;}
+.container{padding:3rem;}
 
 /* Content */
 .container .content{}
@@ -273,7 +273,7 @@ hr, .borderedbox{border-color:#D7D7D7;}
 label span{color:#FF0000; background-color:inherit;}
 input:focus, textarea:focus, *:required:focus{border-color:#E9365A;}
 .overlay{color:#FFFFFF; background-color:inherit;}
-.overlay::after{color:inherit; background-color:rgba(0,0,0,.55);}
+.overlay::after{color:inherit; background-color:rgba(0,0,0,.10);}
 .overlay.coloured::after{color:#292B2C; background-color:rgba(233,54,90,.5);/* #E9365A */}
 
 .btn, .btn.inverse:hover{color:#FFFFFF; background-color:#E9365A; border-color:#E9365A;}
@@ -352,6 +352,7 @@ th{color:#FFFFFF; background-color:#373737;}
 tr, #comments li, #comments input[type="submit"], #comments input[type="reset"]{color:inherit; background-color:#FBFBFB;}
 tr:nth-child(even), #comments li:nth-child(even){color:inherit; background-color:#F7F7F7;}
 table a, #comments a{background-color:inherit;}
+
 
 
 
@@ -445,3 +446,31 @@ element.style {
     background-color:#171717;
 }
 
+/*폼 테두리*/
+div.f_border{
+	margin:3rem 10rem;
+	border: 5px double #E9365A;
+}
+
+    
+/*게시글 상세페이지 */
+.card.my-4.opinion {
+    display: flex;
+}
+
+h1{
+	display:inline-block;
+}
+
+h5.card-header {
+    padding-top: 10px;
+}
+textarea.form-control {
+	margin-bottom: 10px;
+}
+.media.mb-4 {
+    margin-top: 20px;
+    border-color: lightgray;
+    border-style: solid;
+    padding: 10px;
+}

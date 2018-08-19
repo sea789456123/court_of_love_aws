@@ -3,6 +3,16 @@
     flex-wrap: wrap;
 }
 
+.border1{
+    border-color:pink;
+    border-style:none;
+    border-top-left-radius: 0.5em; 
+    border-top-right-radius: 0.5em; 
+    border-bottom-right-radius: 0.5em; 
+    border-bottom-left-radius: 0.5em; 
+}
+
 .first{
     margin-left: 1rem;
 }
+

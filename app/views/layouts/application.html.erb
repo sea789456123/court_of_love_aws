@@ -13,7 +13,15 @@
   
   <!-- Custom styles for this template -->
   <link href="/layout/styles/index.css" rel="stylesheet">
-  
+  <script>
+    function login_check(){
+      <% if user_signed_in? %>
+      <% else %>
+        alert("로그인을 해야 이용하실 수 있습니다.");
+        return false;
+      <% end %>
+    }
+  </script>
   
 </head>
 <body>
@@ -27,8 +35,12 @@
       </div>
       <div id="quickinfo" class="fl_right">
         <ul class="nospace inline">
-          <li><strong>MyPage</strong></li>
-          <li><strong><i class="fa fa-user"></i> Login</strong></li>
+          <% if user_signed_in? %>
+            <li><strong><i class="fa fa-user"></i> MyPage</strong></li>
+            <li><strong><a href="/users/sign_out" data-method="delete"><i class="fa fa-sign-out"></i> Logout</a></strong></li>
+          <% else %>
+            <li><strong><a href="/users/sign_in"><i class="fa fa-sign-in"></i> Login</strong></a></li>
+          <% end %>
         </ul>
       </div>
     </header>
@@ -37,7 +49,7 @@
   <div class="wrapper row2">
     <nav id="mainav" class="hoc clear">
       <ul class="clear">
-        <li><a href="/home/court" style="text-align:center">재판소</a></li>
+        <li><a href="/home/court" style="text-align:center" onclick="return login_check();">재판소</a></li>
         <li><a href="#" style="text-align:center">재판결과</a></li>
         <li><a href="#" style="text-align:center">재판후기</a></li>
         <li><a href="#" style="text-align:center">상담소</a></li>
