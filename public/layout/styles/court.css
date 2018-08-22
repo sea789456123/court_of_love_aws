@@ -35,6 +35,15 @@ h1.an, h1.dn {
     width: 2.5rem;
     text-align: center;
     background-color: hotpink;
+    top: 140px;
+}
+
+h1.an {
+    left: 37px;
+}
+
+h1.dn {
+    left: 178px;
 }
 
 h1.awin {

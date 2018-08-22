@@ -39,13 +39,13 @@
               }
             </script>
           <% if ((c.agree_num == 0) && (c.disagree_num == 0))%>
-          
+            <article><a href="#"><img class="btmspace-30" src="/images/justice.png"></a>
           <% elsif c.agree_num > c.disagree_num %>
-            <article><a href="#"><img class="btmspace-30" src="/images/agree.png" alt=""></a>
+            <article><a href="#"><img class="btmspace-30" src="/images/agree.png"></a>
           <% elsif c.agree_num < c.disagree_num %>
-            <article><a href="#"><img class="btmspace-30" src="/images/disagree.png" alt=""></a>
+            <article><a href="#"><img class="btmspace-30" src="/images/disagree.png"></a>
           <% else %>
-          
+            <article><a href="#"><img class="btmspace-30" src="/images/draw.png"></a>
           <%end%>
               <ul class="nospace btmspace-10 group font-xs">
                 <h4 class="nospace btmspace-10 font-x1 uppercase"><%=c.title%></h4>
