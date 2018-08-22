@@ -16,6 +16,13 @@
     margin-left: 1rem;
 }
 
+.l_box {
+    margin-top: 3rem;
+}
+
+.s_box {
+    margin: 1rem;
+}
 /* 이미지 위에 찬/반 수 띄우기 */
 h1.an, h1.dn {
     position: relative;
@@ -25,26 +32,27 @@ h1.an, h1.dn {
     border: 1px solid hotpink;
     border-radius: 10px;
     height: 2.5rem;
-    padding: 0 0.5rem;
+    width: 2.5rem;
+    text-align: center;
     background-color: hotpink;
 }
 
 h1.awin {
-    top: 60px;
-    left: 115px;
+    top: 150px;
+    left: 38px;
 }
 
 h1.alose {
-    top: 40px;
-    left: 115px;
+    top: 135px;
+    left: 37px;
 }
 
 h1.dlose {
-    top: 40px;
-    left: 250px;
+    top: 135px;
+    left: 172px;
 }
 
 h1.dwin {
-    top: 60px;
-    left: 250px;
+    top: 150px;
+    left: 172px;
 }

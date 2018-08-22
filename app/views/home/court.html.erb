@@ -7,60 +7,60 @@
   </head>
   <body>
     <div class="wrapper row3">
-      <div class="hoc container clear">
+      <div class="hoc clear l_box">
         <div class="center btmspace-50">
-
-  
-
           <h3 class="font-x2 nospace">
           <i class="fa fa-hotjar"></i>핫한 게시글</h3>
           <p class="nospace"><a href="#">연애상담고수님들</a> 빨리 오세요.</p>
         </div>
         <div class="group">
-        <% @courts.each do |c| %>
-          <script>
-            var a = document.getElementById("an");
-            var d = document.getElementById("dn");
-            if( <%= c.agree_num %> > <%= c.disagree_num %>) {
-              a.className += " awin";
-              d.className += " dlose";
-            } else if(<%= c.agree_num %> < <%= c.disagree_num %>){
-              a.className += " alose";
-              d.className += " dwin";
-            }
-          </script>
-          <h1 class="an" id="an"><%= c.agree_num %></h1>
-          <h1 class="dn" id="dn"><%= c.disagree_num %></h1>
-        <% if c.agree_num > c.disagree_num %>
-          <article class="one_third first"><a href="#"><img class="btmspace-30" src="/images/agree.png" alt=""></a>
-        <%else%>
-          <article class="one_third first"><a href="#"><img class="btmspace-30" src="/images/disagree.png" alt=""></a>
-        <%end%>
-            <h4 class="nospace btmspace-10 font-x1 uppercase"><%=c.title%></h4>
-            <ul class="nospace btmspace-10 group font-xs">
-              <li class="fl_left">
-               
-              </li>
-              <li class="fl_right">by <a href="#"><%= c.nickname %></a></li>
-            </ul>
-            <hr>
-            <p><%=c.category %></p><br>
-            <p><%=c.hashtag %></p>
-            <p class="nospace"><a href="/home/detail/<%=c.id%>">Read More &raquo;</a></p>
-          </article>
-<<<<<<< HEAD
+        <% @courts.each_with_index do |c,i| %>
+          <div class="s_box">
+            <h1 class="an"><%= c.agree_num %></h1>
+            <h1 class="dn"><%= c.disagree_num %></h1>
+            <script>
+              var a = document.getElementsByClassName("an");
+              var d = document.getElementsByClassName("dn");
+              var i = <%= i %>;
+              
+              if((<%= c.agree_num %> == 0) && (<%= c.disagree_num %> == 0)){
+                
+              }
+              else if(<%= c.agree_num %> > <%= c.disagree_num %>){
+                a[i].classList.add("awin");
+                d[i].classList.add("dlose");
+              }
+              else if(<%= c.agree_num %> < <%= c.disagree_num %>){
+                a[i].classList.add("alose");
+                d[i].classList.add("dwin");
+              }
+              else {
+                
+              }
+            </script>
+          <% if ((c.agree_num == 0) && (c.disagree_num == 0))%>
+          
+          <% elsif c.agree_num > c.disagree_num %>
+            <article><a href="#"><img class="btmspace-30" src="/images/agree.png" alt=""></a>
+          <% elsif c.agree_num < c.disagree_num %>
+            <article><a href="#"><img class="btmspace-30" src="/images/disagree.png" alt=""></a>
+          <% else %>
+          
+          <%end%>
+              <ul class="nospace btmspace-10 group font-xs">
+                <h4 class="nospace btmspace-10 font-x1 uppercase"><%=c.title%></h4>
+                <li class="fl_right">by <%= c.nickname %></li>
+              </ul>
+              <hr>
+              <p><%=c.category %></p>
+              <p><%=c.hashtag %></p>
+              <p class="nospace"><a href="/home/detail/<%=c.id%>">Read More &raquo;</a></p>
+            </article>
+          </div>
         <%end%>
 
         </div>
       </div>
-      <div class="border1"></div>
-      
-=======
-          <%end%>
-        </div>
-        </div>
-        
->>>>>>> e5dd6b5650658a95b2a46f8a191200c2b6167db0
       <div>
         <a href="/home/new"><button>등록하기</button></a>
       </div>
