@@ -25,30 +25,23 @@
     <!-- Page Content -->
     <div class="container" style="margin-left:10rem; margin-right:10rem; padding:50px;" >
     
+          <!--<h1>Post Title</h1>&nbsp&nbsp&nbsp<i class="fa fa-tag"></i> <%= c.category %>    -->
 
-      <div class="row">
+      <!--<div class="row">-->
 
         <!-- Post Content Column -->
         <div class="col-lg-8">
 
           <!-- Title -->
          
-<<<<<<< HEAD
-          <h1>Post Title</h1>&nbsp&nbsp&nbsp<i class="fa fa-tag"></i> <%=@a_view.category %>    
-          <hr>       
           <!-- Author -->
           <p class="lead">
             
-          <!--<h3 class="mt-4">해쉬태그</h3>-->
-            #<a href="#">연애</a>
-=======
+    
           <h1 style="padding-right: flex"><%=c.title%></h1></br> 닉네임 : <%=c.nickname %> &emsp; category : <%= c.category %> &emsp; series : <%= c.series %> 
           <hr>       
           <!-- Author -->
-          <p class="lead">
-            <%=c.category %>
->>>>>>> e5dd6b5650658a95b2a46f8a191200c2b6167db0
-          </p>
+         
 
           <!--<hr>-->
 
@@ -57,27 +50,8 @@
 
           <hr>
           
-          <!-- Post Content -->
-          <p class="lead">게시글내용 :안녕하세요.</p>
 
           <!-- Preview Image -->
-<<<<<<< HEAD
-          <img class="img-fluid rounded" src="/images/disagree.png" style="vertical-align:middle;" alt="">
-    
-          <hr>
-
-
-          <blockquote class="blockquote">
-            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-            <footer class="blockquote-footer">Someone famous in
-              <cite title="Source Title">Source Title</cite>
-            </footer>
-          </blockquote>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
-=======
           <div style="margin:flex">
             <% if c.agree_num > c.disagree_num %>
               <article class="one_third first" style="margin-left: auto; margin-right: auto; display: block"><a href="#"><img class="btmspace-30" src="/images/agree.png" alt=""></a>
@@ -87,11 +61,12 @@
           </div>
           <hr>
 
-          <!-- Post Content -->
-          <p class="lead"><%=c.content %></p>
->>>>>>> e5dd6b5650658a95b2a46f8a191200c2b6167db0
+          <blockquote class="blockquote">
+           
+            </footer>
+          </blockquote>
 
-          <hr>
+    
 
           <!-- Comments Form -->
           <div class="card my-4 opinion">

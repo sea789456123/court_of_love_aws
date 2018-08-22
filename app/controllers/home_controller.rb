@@ -47,7 +47,7 @@ class HomeController < ApplicationController
   end
   
   def detail #재판소 글 상세보기
- @courts = Court.all
+    @courts = Court.all
     
   end
 end
