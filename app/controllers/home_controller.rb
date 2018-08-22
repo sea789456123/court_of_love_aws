@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index #메인 페이지
+    @courts = Court.all
   end
   
   def court #재판소 페이지

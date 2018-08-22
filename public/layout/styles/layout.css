@@ -482,3 +482,9 @@ textarea.form-control {
     border-style: solid;
     padding: 10px;
 }
+
+element.style {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    padding: 20px;
+}

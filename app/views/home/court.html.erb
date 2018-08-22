@@ -10,8 +10,8 @@
       <div class="hoc clear l_box">
         <div class="center btmspace-50">
           <h3 class="font-x2 nospace">
-          <i class="fa fa-hotjar"></i>핫한 게시글</h3>
-          <p class="nospace"><a href="#">연애상담고수님들</a> 빨리 오세요.</p>
+          <i class="fa fa-hotjar"></i><a style="color:#FF245B"><i class="fa fa-heart"></i> 핫한 게시글 <i class="fa fa-heart"></i></a></h3>
+          <p class="nospace">연애상담고수님들 빨리 오세요. </p>
         </div>
         <div class="group">
         <% @courts.each_with_index do |c,i| %>
@@ -48,11 +48,11 @@
             <article><a href="#"><img class="btmspace-30" src="/images/draw.png"></a>
           <%end%>
               <ul class="nospace btmspace-10 group font-xs">
-                <h4 class="nospace btmspace-10 font-x1 uppercase"><%=c.title%></h4>
+                <h4 class="nospace btmspace-10 font-x1 uppercase"><a style="color:#FF245B"><%=c.title%></a></h4>
                 <li class="fl_right">by <%= c.nickname %></li>
               </ul>
               <hr>
-              <p><%=c.category %></p>
+              <p><i class="fa fa-tag"></i> <%=c.category %></p>
               <p><%=c.hashtag %></p>
               <p class="nospace"><a href="/home/detail/<%=c.id%>">Read More &raquo;</a></p>
             </article>
@@ -62,7 +62,8 @@
         </div>
       </div>
       <div>
-        <a href="/home/new"><button>등록하기</button></a>
+        <a href="/home/new"><button class="fun-btn">등록하기</button></a>
+       
       </div>
     </div>
   </body>
