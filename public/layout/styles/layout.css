@@ -482,3 +482,7 @@ textarea.form-control {
     border-style: solid;
     padding: 10px;
 }
+
+a {
+	color: #E9365A;
+}
