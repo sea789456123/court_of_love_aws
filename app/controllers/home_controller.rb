@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index #메인 페이지
+    @courts = Court.all
   end
   
   def court #재판소 페이지
@@ -47,7 +48,6 @@ class HomeController < ApplicationController
   end
   
   def detail #재판소 글 상세보기
-    @courts = Court.all
-    
+    @court = Court.find(params[:c_id])
   end
 end
