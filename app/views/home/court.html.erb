@@ -5,7 +5,7 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
 
   </head>
-  <body>
+  <body onload="printClock()">
     <div class="wrapper row3">
       <div class="hoc clear l_box">
         <div class="center btmspace-50">
@@ -31,6 +31,8 @@
                 a[i].classList.add("alose");
                 d[i].classList.add("dwin");
               }
+              
+              
 
             </script>
           <% if ((c.agree_num == 0) && (c.disagree_num == 0))%>
@@ -45,6 +47,7 @@
               <ul class="nospace btmspace-10 group font-xs">
                 <h4 class="nospace btmspace-10 font-x1 uppercase"><a style="color:#FF245B"><%=c.title%></a></h4>
                 <li class="fl_right">by <%= c.nickname %></li>
+                <li id="time"></li>
               </ul>
               <hr>
               <p><i class="fa fa-tag"></i> <%=c.category %></p>

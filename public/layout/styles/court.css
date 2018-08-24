@@ -23,6 +23,7 @@
 .s_box {
     margin: 0.6rem;
 }
+
 /* 이미지 위에 찬/반 수 띄우기 */
 h1.an, h1.dn {
     position: relative;
