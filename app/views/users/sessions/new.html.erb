@@ -1,25 +1,58 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
+     <link href="/layout/styles/login.css" rel="stylesheet" type="text/css">
+     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+
   </head>
-  <body>
-    <h2>Log in</h2>
-    <form novalidate="novalidate" class="simple_form new_user" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="UQGGBMW/1cClyVRbpQkf1X7XoNSMeu8Fwn4jUZBX4PdF0RhgyZ994q1Cu6IGj7dhZrBMA0IqpeObAhIkwP9iMw==">
-      <div class="form-inputs">
-        <div class="input email optional user_email"><label class="email optional" for="user_email">Email</label><input class="string email optional" autofocus="autofocus" type="email" value="" name="user[email]" id="user_email"></div>
-        <div class="input password optional user_password"><label class="password optional" for="user_password">Password</label><input class="password optional" type="password" name="user[password]" id="user_password"></div>
-        <div class="input boolean optional user_remember_me"><input value="0" type="hidden" name="user[remember_me]"><label class="boolean optional checkbox" for="user_remember_me"><input class="boolean optional" type="checkbox" value="1" name="user[remember_me]" id="user_remember_me">Remember me</label></div>
-      </div>
+  <script>
+    $('.toggle').on('click', function() {
+      $('.container').stop().addClass('active');
+    });
     
-      <div class="form-actions">
-        <input type="submit" name="commit" value="Log in" class="btn">
-      </div>
-    </form>
-    <a href="/users/sign_up">Sign up</a>
-    <br>
-    <a href="/users/password/new">Forgot your password?</a>
-    <br>
+    $('.close').on('click', function() {
+      $('.container').stop().removeClass('active');
+    });
+  </script>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card">
+        <h1 class="title">로그인</h1>
+        <div class="input-container">
+        <form novalidate="novalidate" class="simple_form new_user"
+              id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post">
+          <input name="utf8" type="hidden" value="✓">
+          <input type="hidden" name="authenticity_token" value="UQGGBMW/1cClyVRbpQkf1X7XoNSMeu8Fwn4jUZBX4PdF0RhgyZ994q1Cu6IGj7dhZrBMA0IqpeObAhIkwP9iMw==">
+        </div>
+    
+          <div class="input-container">
+          
+          <label class="email optional" for="#{label}" required="required"></label>
+          <div class="bar">
+          </div>
+          <input class="string email optional" autofocus="autofocus" type="email" value="" name="user[email]" id="user_email" placeholder="Email"></div>
+          <div class="input-container">
+            <label class="password optional" for="#{label}" required="required"></label>
+            <div class="bar"></div>
+            <input class="password optional" type="password" name="user[password]" id="user_password" placeholder="Password">
+          </div>
+          
+       
+    
+        
+        <div class="form-actions">
+        <input type="submit" name="commit" value="Log in" class="fun-btn">
+        </div>
+
+
+      </form>
+      <a href="/users/sign_up">회원가입</a>
+      <br>
+      <a href="/users/password/new">비밀번호 찾기</a>
+      <br>
+    </div>
+    </div>
 
   </body>
 </html>

@@ -33,6 +33,7 @@
 
 .l_box {
     margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .s_box {
@@ -143,3 +144,5 @@ div.l_box {
     border-radius: 4px;
     padding: 2rem;
 }
+
+
