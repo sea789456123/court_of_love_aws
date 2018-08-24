@@ -12,8 +12,64 @@
   /*전체적용 글씨체*/
   body *{ 
     font-family:'NanumBarunpen';}
+    
+  /* 이미지 위에 찬/반 수 띄우기 */
+    h1.an, h1.dn {
+        position: relative;
+        font-weight: bold;
+        color: white;
+        display: inline-block;
+        border: 1px solid hotpink;
+        border-radius: 10px;
+        height: 2.5rem;
+        width: 2.5rem;
+        text-align: center;
+        background-color: hotpink;
+        top: 140px;
+    }
+
+    h1.an {
+        left: 37px;
+    }
+    
+    h1.dn {
+        left: 178px;
+    }
+    
+    h1.awin {
+        top: 150px;
+        left: 38px;
+    }
+    
+    h1.alose {
+        top: 135px;
+        left: 37px;
+    }
+    
+    h1.dlose {
+        top: 135px;
+        left: 172px;
+    }
+    
+    h1.dwin {
+        top: 150px;
+        left: 172px;
+    }
+    
+    button {
+        display: inline-block;
+        margin-top: 3rem;
+        margin-left: 76rem;
+    }
+    
+    .row3{color:#888888; background-color:#FFFFFF;}
+    .wrapper{display:block; width:100%; margin:0; padding:0; text-align:left; word-wrap:break-word;}
 
 
 
+  .group {
+    display: flex;
+    flex-wrap: wrap;
+}
   
   
