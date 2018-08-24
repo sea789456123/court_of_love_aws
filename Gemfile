@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#조회수
+gem 'impressionist'
 #시간계산
 gem 'jquery-countdown-rails'
 #db관리

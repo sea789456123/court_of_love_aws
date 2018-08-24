@@ -15,10 +15,10 @@
         </div>
         <div class="group">
         <% @courts.each_with_index do |c,i| %>
+        조회수:<%= "#{c.unique_impression_count}" %>
           <div class="s_box">
             <ul class="nospace btmspace-10 group font-xs">
                 <h4 class="nospace btmspace-10 font-x1 uppercase" style="font-size: 1.5rem;"><a style="color:#FF245B"><%=c.title%></a></h4>
-                <li class="fl_right">by <%= c.nickname %></li>
             </ul>
             <h1 class="an"><%= c.agree_num %></h1>
             <h1 class="dn"><%= c.disagree_num %></h1>
@@ -47,6 +47,7 @@
           <%end%>
               <br>
               <span id="clock" style="font-size: 1.5rem;"></span><span>남음</span>
+              <span class="fl_right" style="margin-left: 3rem;">by <%= c.nickname %></span>
                 <script>
                     $('#clock').countdown({until: <%= c.end_date.to_i - Time.now.to_i %>,
                        expiryText: '<div class="over">마감되었습니다.</div>'
