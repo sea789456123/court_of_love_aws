@@ -47,11 +47,8 @@ Licence URI: https://www.os-templates.com/template-terms-->
 
     </div>
    
-    <!-- ################################################################################################ -->
     <div class="wrapper row3">
-      <div class="hoc container clear">
-        <div class="center btmspace-50">
-        <div class="hoc clear l_box">
+      <div class="hoc clear l_box">
         <div class="center btmspace-50">
           <h3 class="font-x2 nospace">
           <i class="fa fa-hotjar"></i><a style="color:#FF245B"><i class="fa fa-heart"></i> 핫한 게시글 <i class="fa fa-heart"></i></a></h3>
@@ -67,10 +64,7 @@ Licence URI: https://www.os-templates.com/template-terms-->
               var d = document.getElementsByClassName("dn");
               var i = <%= i %>;
               
-              if((<%= c.agree_num %> == 0) && (<%= c.disagree_num %> == 0)){
-                
-              }
-              else if(<%= c.agree_num %> > <%= c.disagree_num %>){
+              if(<%= c.agree_num %> > <%= c.disagree_num %>){
                 a[i].classList.add("awin");
                 d[i].classList.add("dlose");
               }
@@ -78,9 +72,7 @@ Licence URI: https://www.os-templates.com/template-terms-->
                 a[i].classList.add("alose");
                 d[i].classList.add("dwin");
               }
-              else {
-                
-              }
+
             </script>
           <% if ((c.agree_num == 0) && (c.disagree_num == 0))%>
             <article><a href="#"><img class="btmspace-30" src="/images/justice.png"></a>
@@ -106,13 +98,11 @@ Licence URI: https://www.os-templates.com/template-terms-->
         </div>
       </div>
       <div>
-        <a href="/home/new"><button class="fun-btn">등록하기</button></a>
-       
+        <a href="/home/new"><button class="fun-btn court_b">등록하기</button></a>
       </div>
     </div>
-
-      </div>
-    </div>
+    
+    
     <div class="wrapper row5">
       <div id="copyright" class="hoc clear">
         <!-- ################################################################################################ -->
