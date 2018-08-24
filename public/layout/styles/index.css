@@ -12,7 +12,7 @@
   /*전체적용 글씨체*/
   body *{ 
     font-family:'NanumBarunpen';}
-    
+
 .group{
     display: flex;
     flex-wrap: wrap;
@@ -33,6 +33,7 @@
 
 .l_box {
     margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .s_box {
@@ -145,6 +146,3 @@ div.l_box {
 }
 
 
-
-  
-  

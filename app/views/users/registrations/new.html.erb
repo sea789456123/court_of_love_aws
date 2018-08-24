@@ -1,24 +1,69 @@
-<h2>Sign up</h2>
+<!DOCTYPE html>
+<html>
+  <head>
+  
+  <link rel="stylesheet" media="all" href="/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="true">
+  <link rel="stylesheet" media="all" href="/assets/application.self-f8fcf0d25335384acf6f3138e725a1581b17ed893d9dc7a69f496b52c859e67c.css?body=1" data-turbolinks-track="true">
+  <script src="/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" data-turbolinks-track="true"></script>
+  <script src="/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" data-turbolinks-track="true"></script>
+  <script src="/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" data-turbolinks-track="true"></script>
+  <script src="/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="true"></script>
+  <script src="/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" data-turbolinks-track="true"></script>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+  <!--템플릿 관련-->
+  <link href="/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+   <!--Custom styles for this template -->
+  <link href="/layout/styles/index.css" rel="stylesheet">
+  <link href="/layout/styles/login.css" rel="stylesheet">
+  <script>
+    function login_check(){
+        alert("로그인을 해야 이용하실 수 있습니다.");
+        return false;
+    }
+  </script>
+  
+  <title>Workspace</title><meta name="csrf-param" content="authenticity_token">
+  <meta name="csrf-token" content="+xFUUGz2cdED+hazIKKcBhPUHrAv9CmEIyEakBixZuFDEri5ndGOZOigBaUWMdh7qdtgS42Tr6BY+qcgrLByuQ==">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
-<<<<<<< HEAD
-=======
-    <%= f.input :nickname, required: true, autofocus: true %>
-    <%= f.input :age, required: true, autofocus: true %>
-    <%= f.input :gender, required: true, autofocus: true %>
-    <%= f.input :grade, required: true, autofocus: true %>
->>>>>>> 894cc512e047ca85a3aa3ec1d04967440e271f11
+  <script>
+      $('.toggle').on('click', function() {
+        $('.container').stop().addClass('active');
+      });
+      
+      $('.close').on('click', function() {
+        $('.container').stop().removeClass('active');
+      });
+  </script>
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card">
+    <h1 class="title">회원가입</h1>
+    <form novalidate="novalidate" class="simple_form new_user" id="new_user" action="/users" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="+hQXed9iUwYOIeyeWgC/EPxQwOZh1oRs3QPUJ0VkoJRCF/uQLkWss+V7/4hsk/ttRl++HcOxAkim2GmX8WW0zA==">
+  
+
+    <div class="form-inputs">
+      <div class="input email required user_email"><label class="email required" for="user_email"><abbr title="required">*</abbr> 이메일</label><input class="string email required" autofocus="autofocus" required="required" aria-required="true" type="email" value="" name="user[email]" id="user_email"></div>
+      <div class="input password required user_password field_with_hint"><label class="password required" for="user_password"><abbr title="required">*</abbr> 비밀번호</label><input class="password required" required="required" aria-required="true" type="password" name="user[password]" id="user_password"><span class="hint">6자 이상으로 설정해주세요.</span></div>
+      <div class="input password required user_password_confirmation"><label class="password required" for="user_password_confirmation"><abbr title="required">*</abbr> 비밀번호 확인</label><input class="password required" required="required" aria-required="true" type="password" name="user[password_confirmation]" id="user_password_confirmation"></div>
+      <div class="input string required user_nickname"><label class="string required" for="user_nickname"><abbr title="required">*</abbr> 닉네임</label><input class="string required" autofocus="autofocus" required="required" aria-required="true" type="text" name="user[nickname]" id="user_nickname"></div>
+      <div class="input integer required user_age"><label class="integer required" for="user_age"><abbr title="required">*</abbr> 나이</label><input class="numeric integer required" autofocus="autofocus" required="required" aria-required="true" type="number" step="1" name="user[age]" id="user_age"></div>
+      <div class="input string required user_gender"><label class="string required" for="user_gender"><abbr title="required">*</abbr> 성별</label><input class="string required" autofocus="autofocus" required="required" aria-required="true" type="text" name="user[gender]" id="user_gender"></div>
+      <div class="input string required user_grade"><label class="string required" for="user_grade"><abbr title="required">*</abbr> Grade</label><input class="string required" autofocus="autofocus" required="required" aria-required="true" type="text" name="user[grade]" id="user_grade"></div>
+    </div>
+  
+    <div class="form-actions">
+      <input type="submit" name="commit" value="Sign up" class="fun-btn">
+    </div>
+    </form>
+
+    <!--<a href="/users/sign_in">Log in</a>-->
+    
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
   </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+    
+  </body>
+</html>
