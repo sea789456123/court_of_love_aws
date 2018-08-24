@@ -27,11 +27,17 @@
       닉네임 : <%= @court.nickname %> &emsp; category : <%= @court.category %> &emsp; series : <%= @court.series %><hr>
       
       <!-- Date/Time -->
-      <p>재판기간 :<%= @court.end_date %> <%= @court.end_hour %></p><hr>
+      <span id="clock" style="font-size: 1.5rem;"></span><span>남음</span>
+      <hr>
+      <script>
+          $('#clock').countdown({until: <%= @court.end_date.to_i - Time.now.to_i %>,
+             expiryText: '<div class="over">마감되었습니다.</div>'
+            });
+      </script>
       
       <!-- Content -->
       <div>
-        <p>내용 : <%= @court.content %></p>
+        <pre><%= @court.content %></pre>
       </div>
           
       <!-- Preview Image -->

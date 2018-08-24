@@ -57,6 +57,10 @@ Licence URI: https://www.os-templates.com/template-terms-->
         <div class="group">
         <% @courts.each_with_index do |c,i| %>
           <div class="s_box">
+            <ul class="nospace btmspace-10 group font-xs">
+                <h4 class="nospace btmspace-10 font-x1 uppercase" style="font-size: 1.5rem;"><a style="color:#FF245B"><%=c.title%></a></h4>
+                <li class="fl_right">by <%= c.nickname %></li>
+            </ul>
             <h1 class="an"><%= c.agree_num %></h1>
             <h1 class="dn"><%= c.disagree_num %></h1>
             <script>
@@ -72,7 +76,6 @@ Licence URI: https://www.os-templates.com/template-terms-->
                 a[i].classList.add("alose");
                 d[i].classList.add("dwin");
               }
-
             </script>
           <% if ((c.agree_num == 0) && (c.disagree_num == 0))%>
             <article><a href="#"><img class="btmspace-30" src="/images/justice.png"></a>
@@ -83,10 +86,14 @@ Licence URI: https://www.os-templates.com/template-terms-->
           <% else %>
             <article><a href="#"><img class="btmspace-30" src="/images/draw.png"></a>
           <%end%>
-              <ul class="nospace btmspace-10 group font-xs">
-                <h4 class="nospace btmspace-10 font-x1 uppercase"><a style="color:#FF245B"><%=c.title%></a></h4>
-                <li class="fl_right">by <%= c.nickname %></li>
-              </ul>
+              <br>
+              <span id="clock" style="font-size: 1.5rem;"></span><span>남음</span>
+                <script>
+                    $('#clock').countdown({until: <%= c.end_date.to_i - Time.now.to_i %>,
+                       expiryText: '<div class="over">마감되었습니다.</div>'
+                      });
+        
+                </script>
               <hr>
               <p><i class="fa fa-tag"></i> <%=c.category %></p>
               <p><%=c.hashtag %></p>
@@ -96,9 +103,6 @@ Licence URI: https://www.os-templates.com/template-terms-->
         <%end%>
 
         </div>
-      </div>
-      <div>
-        <a href="/home/new"><button class="fun-btn court_b">등록하기</button></a>
       </div>
     </div>
     

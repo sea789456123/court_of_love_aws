@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#시간계산
+gem 'jquery-countdown-rails'
 #db관리
 gem 'rails_db'
 #devise

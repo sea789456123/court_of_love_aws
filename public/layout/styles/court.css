@@ -24,6 +24,11 @@
     margin: 0.6rem;
 }
 
+img.btmspace-30{
+  margin-top: 0px !important;
+}
+
+
 /* 이미지 위에 찬/반 수 띄우기 */
 h1.an, h1.dn {
     position: relative;
@@ -36,7 +41,7 @@ h1.an, h1.dn {
     width: 2.5rem;
     text-align: center;
     background-color: hotpink;
-    top: 140px;
+    top: 95px;
 }
 
 h1.an {
@@ -48,22 +53,22 @@ h1.dn {
 }
 
 h1.awin {
-    top: 150px;
+    top: 105px;
     left: 38px;
 }
 
 h1.alose {
-    top: 135px;
+    top: 90px;
     left: 37px;
 }
 
 h1.dlose {
-    top: 135px;
+    top: 90px;
     left: 172px;
 }
 
 h1.dwin {
-    top: 150px;
+    top: 105px;
     left: 172px;
 }
 

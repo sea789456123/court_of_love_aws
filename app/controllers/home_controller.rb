@@ -27,20 +27,6 @@ class HomeController < ApplicationController
     c.category = params[:category]
     c.hashtag = params[:hashtag]
     c.end_date = params[:end_date]
-    h = params[:end_hour].to_i
-    if params[:ampm] == "am"
-      if h == 12
-        c.end_hour = 0
-      else
-        c.end_hour = h
-      end
-    else
-      if h == 12
-        c.end_hour = h
-      else
-        c.end_hour = h+12;
-      end
-    end
     c.agree_num = 0
     c.disagree_num = 0
     c.save
