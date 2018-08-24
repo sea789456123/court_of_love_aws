@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'home/court'
+  get 'home/counseling'
+  get 'home/review'
   get 'home/new' 
   get 'home/detail/:c_id'=> 'home#detail'
   post 'home/create'

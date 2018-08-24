@@ -16,119 +16,71 @@
     <!-- Custom styles for this template -->
     <link href="css/blog-post.css" rel="stylesheet">
     <link href="/layout/styles/court.css" rel="stylesheet" type="text/css">
+    <link href="/layout/styles/detail.css" rel="stylesheet" type="text/css">
+
 
   </head>
 
   <body>
-
-<% @courts.each do |c| %>
     <!-- Page Content -->
     <div class="container" style="margin-left:10rem; margin-right:10rem; padding:20px;" >
-    
-          <!--<h1>Post Title</h1>&nbsp&nbsp&nbsp<i class="fa fa-tag"></i> <%= c.category %>    -->
-
-      <!--<div class="row">-->
-
-        <!-- Post Content Column -->
-        <!--<div class="col-lg-8">-->
-
-          <!-- Title -->
-         
-          <!-- Author -->
-          <p class="lead">
-            
-    
-          <h1 style="color:#FF245B"><%=c.title%></h1>
-          </br> 닉네임 : <%=c.nickname %> &emsp; category : <%= c.category %> &emsp; series : <%= c.series %> 
-          <hr>       
-          <!-- Author -->
-         
-
-          <!--<hr>-->
-
-          <!-- Date/Time -->
-          <p>재판기간 :<%=c.end_date%> <%=c.end_hour%></p>
-
-          <hr>
-          
-
-          <!-- Preview Image -->
-          <div style="margin:flex">
-            <% if c.agree_num > c.disagree_num %>
-              <article class="one_third first"><a href="#"><img class="btmspace-30" src="/images/agree.png" alt=""></a>
-            <%else%>
-              <article class="one_third first" style="text-align: center"><a href="#"><img class="btmspace-30" src="/images/disagree.png" alt=""></a>
-            <%end%>
-          </div>
-          <hr>
-
-          <blockquote class="blockquote">
-           
-            </footer>
-          </blockquote>
-
-    
-
-          <!-- Comments Form -->
-          <div class="card my-4 opinion">
-            <div class="card opinion1">
-              <h5 class="card-header">검사측 의견:</h5>
-              <div class="card-body">
-                <form>
-                  <div class="form-group">
-                    <textarea class="form-control" style="width:300px; height:100px;" rows="3"></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-primary">등록하기</button>
-              </div>
-
-              <!-- Single Comment -->
-              <div class="media mb-4">
-                <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-                <div class="media-body">
-                  <h5 class="mt-0">Commenter Name</h5>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                </div>
-                  <button class="btn btn-primary"data-dismiss="model" type="button">추천 <i class="fa fa-thumbs-up"></i></button>
-              </div>
-
-            </div>
-            
-            <div class="card opinion2">
-              <h5 class="card-header">변호사측 의견:</h5>
-              <div class="card-body">
-                <form>
-                  <div class="form-group">
-                    <textarea class="form-control" style="width:300px; height:100px;" rows="3"></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Submit></button>
-                  <button class="btn btn-primary"data-dismiss="model" type="button">추천
-                  <i class="fa fa-thumbs-up"></i></button>
-                </form>
-              </div>
-              
-              <!-- Single Comment -->
-              <div class="media mb-4">
-                <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-                <div class="media-body">
-                  <h5 class="mt-0">Commenter Name</h5>
-                 
-                </div>
-              </div>
-              
-            </div>
-            
-          </div>
-
-        </div>
-
- 
-
+      <h1 style="color:#FF245B"><%= @court.title %></h1><br>
+      닉네임 : <%= @court.nickname %> &emsp; category : <%= @court.category %> &emsp; series : <%= @court.series %><hr>
+      
+      <!-- Date/Time -->
+      <p>재판기간 :<%= @court.end_date %> <%= @court.end_hour %></p><hr>
+      
+      <!-- Content -->
+      <div>
+        <p>내용 : <%= @court.content %></p>
       </div>
-      <!-- /.row -->
-
-    </div>
-    <!-- /.container -->
-<%end%>
+          
+      <!-- Preview Image -->
+      <div style="margin:flex">
+        <% if ((@court.agree_num == 0) && (@court.disagree_num == 0))%>
+          <article><a href="#"><img class="btmspace-30" src="/images/justice.png"></a>
+        <% elsif @court.agree_num > @court.disagree_num %>
+          <article><a href="#"><img class="btmspace-30" src="/images/agree.png"></a>
+        <% elsif @court.agree_num < @court.disagree_num %>
+          <article><a href="#"><img class="btmspace-30" src="/images/disagree.png"></a>
+        <% else %>
+          <article><a href="#"><img class="btmspace-30" src="/images/draw.png"></a>
+        <%end%>
+      </div><hr>
+      
+      <!-- 찬/반버튼 -->
+      <div class="vote">
+        <button>찬성</button>
+        <button>반대</button>
+      </div>
+      
+      <!-- Comments Form -->
+      <div class="card my-4">
+        <h5 class="card-header">Leave a Comment:</h5>
+        <div class="card-body">
+          <form class="c_form">
+            <input class="form-control c_input"></input>
+            <button type="submit" class="btn btn-primary c_submit">Submit</button>
+          </form>
+        </div>
+      </div>
+      <!-- 댓글 확인 -->
+      <div class="opinion">
+        <div class="media mb-4 opinion1">
+          <div class="media-body">
+            <h5 class="mt-0">Commenter Name</h5>
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+          </div>
+        </div>
+        <div class="media mb-4 opinion2">
+          <div class="media-body">
+            <h5 class="mt-0">Commenter Name</h5>
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+          </div>
+        </div>
+      </div>
+      
+    </div> <!-- content 끝 -->
  
 
     <!-- Bootstrap core JavaScript -->

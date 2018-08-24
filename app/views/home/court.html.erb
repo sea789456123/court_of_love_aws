@@ -23,10 +23,7 @@
               var d = document.getElementsByClassName("dn");
               var i = <%= i %>;
               
-              if((<%= c.agree_num %> == 0) && (<%= c.disagree_num %> == 0)){
-                
-              }
-              else if(<%= c.agree_num %> > <%= c.disagree_num %>){
+              if(<%= c.agree_num %> > <%= c.disagree_num %>){
                 a[i].classList.add("awin");
                 d[i].classList.add("dlose");
               }
@@ -34,9 +31,7 @@
                 a[i].classList.add("alose");
                 d[i].classList.add("dwin");
               }
-              else {
-                
-              }
+
             </script>
           <% if ((c.agree_num == 0) && (c.disagree_num == 0))%>
             <article><a href="#"><img class="btmspace-30" src="/images/justice.png"></a>
@@ -61,10 +56,8 @@
 
         </div>
       </div>
-      <div>
-        <a href="/home/new"><button class="fun-btn">등록하기</button></a>
-       
-      </div>
+     
+     
     </div>
   </body>
 </html>
