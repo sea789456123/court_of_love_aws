@@ -13,9 +13,6 @@ class HomeController < ApplicationController
     else
       @c_id = Court.last.id+1;
     end
-
-   
-    
   end
   
   def create #재판소 글 DB 등록
@@ -33,8 +30,17 @@ class HomeController < ApplicationController
     redirect_to '/home/court'
   end
   
+  
+  before_action :log_impression, :only=> [:detail]
+  def log_impression
+      @hit_court = Court.find(params[:c_id])
+      # this assumes you have a current_user method in your authentication system
+      @hit_court.impressions.create(ip_address: request.remote_ip,user_id:current_user.id)
+  end
+  
   def detail #재판소 글 상세보기
     @court = Court.find(params[:c_id])
+    #@court.click_num = 
   end
   
   def counseling
