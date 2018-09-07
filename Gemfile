@@ -1,3 +1,4 @@
+ruby '2.3.4'
 source 'https://rubygems.org'
 
 #조회수
@@ -8,8 +9,7 @@ gem 'jquery-countdown-rails'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -40,6 +40,8 @@ group :development, :test do
   gem 'byebug'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+  # Use SCSS for stylesheets
+  gem 'sass-rails', '~> 5.0'
 end
 
 group :development do
