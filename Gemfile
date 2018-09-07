@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'devise-bootstrap-views', '~> 1.0'
 #조회수
 gem 'impressionist'
 #시간계산
