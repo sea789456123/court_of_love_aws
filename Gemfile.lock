@@ -101,6 +101,7 @@ GEM
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
     orm_adapter (0.5.0)
+    pg (1.1.3)
     polyamorous (1.3.3)
       activerecord (>= 3.0)
     rack (1.6.8)
@@ -210,6 +211,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-countdown-rails
   jquery-rails
+  pg
   rails (= 4.2.5)
   rails_db
   sass-rails (~> 5.0)

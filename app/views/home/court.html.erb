@@ -15,7 +15,6 @@
         </div>
         <div class="group">
         <% @courts.each_with_index do |c,i| %>
-        조회수:<%= "#{c.unique_impression_count}" %>
           <div class="s_box">
             <ul class="nospace btmspace-10 group font-xs">
                 <h4 class="nospace btmspace-10 font-x1 uppercase" style="font-size: 1.5rem;"><a style="color:#FF245B"><%=c.title%></a></h4>
