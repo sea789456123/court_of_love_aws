@@ -9,22 +9,23 @@
   <body>
     <!-- Page Content -->
     <div class="container f_border">
-      <h1 class="title">재판소 신청</h1>
-      <form action="/home" method="POST">
+      <h1 class="title">재판소 수정</h1>
+      <form action="/home/<%= @court.id %>" method="post">
         <input type="hidden" name="authenticity_token" value="<%= @token %>">
+        <input type="hidden" name="_method" value="patch">
         <div class="row">
           <div class="col-lg-8">
-            <h1>1. 사건번호: <%= @c_id %></h1>
+            <h1>1. 사건번호: <%= @court.id %></h1>
             <hr>
             
-            <h1>2. 원고(의뢰인): <input name="nickname" value="<%= current_user.nickname %>" class="item2" readonly></h1> <!--court.nickname-->  
+            <h1>2. 원고(의뢰인): <input name="nickname" value="<%= @court.nickname %>" class="item2" readonly></h1> <!--court.nickname-->  
             <hr>
             
             <div class="wrap item3">
               <h1>3. 제목:&nbsp</h1>
-              <input name="title">&nbsp
+              <input name="title" value="<%= @court.title %>">&nbsp
               <h1>시리즈:&nbsp</h1>
-              <select name="series">
+              <select name="series" value="<%= @court.series %>">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -34,13 +35,13 @@
             
             <div class="wrap item4">
               <h1>4. 내용:</h1>
-              <textarea name="content" class="content" style="width:900px; height:500px;"></textarea>
+              <textarea name="content" class="content" style="width:900px; height:500px;"><%= @court.content %></textarea>
               <hr>
             </div>
             
             <div class="wrap item5">
               <h1 class="mt-4">5. 카테고리:&nbsp</h1>
-              <select name="category">
+              <select name="category" value="<%= @court.category %>">
                 <option>썸</option>
                 <option>연애</option>
                 <option>이별</option>
@@ -51,13 +52,13 @@
             
             <div class="wrap item6">
               <h1 class="mt-4">6. 해쉬태그</h1>
-              <input name="hashtag" type="text" value="#" id="hashtag">
+              <input name="hashtag" type="text" value="<%= @court.hashtag %>" id="hashtag">
             </div>
             <hr>
           
             <div class="wrap item7">
               <h1>7. 판결기간:&nbsp</h1>
-              <input name="end_date" type="datetime-local" class="date">&nbsp
+              <input name="end_date" value="<%= @court.end_date %>" type="datetime-local" class="date">&nbsp
               <input type="submit" class="submit">
             </div>
           </div>

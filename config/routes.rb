@@ -2,13 +2,23 @@ Rails.application.routes.draw do
 
   devise_for :users
   root 'home#index'
-
+  
+  #CREATE (POST)
+  get 'home/new'
+  post 'home' => 'home#create'
+  
+  #READ (GET)
   get 'home/court'
   get 'home/counseling'
   get 'home/review'
-  get 'home/new' 
-  get 'home/detail/:c_id'=> 'home#detail'
-  post 'home/create'
+  get 'home/:c_id' => 'home#detail'
+  
+  #UPDATE (PATCH)
+  get 'home/edit/:c_id' => 'home#edit'
+  patch 'home/:c_id' => 'home#update'
+  
+  #DESTROY (DELETE)
+  delete 'home/:c_id' => 'home#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

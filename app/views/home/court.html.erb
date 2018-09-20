@@ -36,13 +36,13 @@
               }
             </script>
           <% if ((c.agree_num == 0) && (c.disagree_num == 0))%>
-            <article><a href="#"><img class="btmspace-30" src="/images/justice.png"></a>
+            <article><a href="/home/<%=c.id%>"><img class="btmspace-30" src="/images/justice.png"></a>
           <% elsif c.agree_num > c.disagree_num %>
-            <article><a href="#"><img class="btmspace-30" src="/images/agree.png"></a>
+            <article><a href="/home/<%=c.id%>"><img class="btmspace-30" src="/images/agree.png"></a>
           <% elsif c.agree_num < c.disagree_num %>
-            <article><a href="#"><img class="btmspace-30" src="/images/disagree.png"></a>
+            <article><a href="/home/<%=c.id%>"><img class="btmspace-30" src="/images/disagree.png"></a>
           <% else %>
-            <article><a href="#"><img class="btmspace-30" src="/images/draw.png"></a>
+            <article><a href="/home/<%=c.id%>"><img class="btmspace-30" src="/images/draw.png"></a>
           <%end%>
               <br>
               <span id="clock" style="font-size: 1.5rem;"></span><span>남음</span>
@@ -56,7 +56,7 @@
               <hr>
               <p><i class="fa fa-tag"></i> <%=c.category %></p>
               <p><%=c.hashtag %></p>
-              <p class="nospace"><a href="/home/detail/<%=c.id%>">Read More &raquo;</a></p>
+              <p class="nospace"><a href="/home/<%=c.id%>">Read More &raquo;</a></p>
             </article>
           </div>
         <%end%>

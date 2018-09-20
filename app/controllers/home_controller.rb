@@ -8,6 +8,7 @@ class HomeController < ApplicationController
   end
   
   def new #재판소 글올리기
+    @token = form_authenticity_token
     if(Court.count==0)
       @c_id = 1;
     else
@@ -27,6 +28,28 @@ class HomeController < ApplicationController
     c.agree_num = 0
     c.disagree_num = 0
     c.save
+    redirect_to '/home/court'
+  end
+  
+  def edit
+    @token = form_authenticity_token
+    @court = Court.find(params[:c_id])
+  end
+  
+  def update
+    c = Court.find(params[:c_id])
+    c.title = params[:title]
+    c.series = params[:series]
+    c.content = params[:content]
+    c.category = params[:category]
+    c.hashtag = params[:hashtag]
+    c.end_date = params[:end_date]
+    c.save
+    redirect_to "/home/detail/#{params[:c_id]}"
+  end
+  
+  def destroy
+    Court.destroy(params[:c_id])
     redirect_to '/home/court'
   end
   
