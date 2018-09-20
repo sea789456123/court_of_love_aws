@@ -24,7 +24,7 @@
   <body>
     <!-- Page Content -->
     <div class="container" style="margin-left:10rem; margin-right:10rem; padding:20px;" >
-      <h1 class="couttitle" style="color:#FF245B"><%= @court.title %></h1>&nbsp<a href="/home/edit/<%= @court.id %>">수정</a>&nbsp<a href="/home/<%= @court.id %>" data-method="DELETE" data-confirm="삭제하시겠습니까?">삭제</a><br>
+      <h1 class="couttitle" style="color:#FF245B"><%= @court.title %></h1>&nbsp<a href="/home/<%= @court.id %>/edit">수정</a>&nbsp<a href="/home/<%= @court.id %>" data-method="DELETE" data-confirm="삭제하시겠습니까?">삭제</a><br>
       닉네임 : <%= @court.nickname %> &emsp; category : <%= @court.category %> &emsp; series : <%= @court.series %><hr>
       
       <!-- Date/Time -->

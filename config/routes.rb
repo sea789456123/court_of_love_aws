@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   devise_for :users
   root 'home#index'
   
@@ -13,8 +12,8 @@ Rails.application.routes.draw do
   get 'home/review'
   get 'home/:c_id' => 'home#detail'
   
-  #UPDATE (PATCH)
-  get 'home/edit/:c_id' => 'home#edit'
+  #UPDATE (PUT or PATCH)
+  get 'home/:c_id/edit' => 'home#edit'
   patch 'home/:c_id' => 'home#update'
   
   #DESTROY (DELETE)
