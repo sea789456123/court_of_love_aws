@@ -39,7 +39,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+  
 end
 
 group :development do
@@ -59,4 +59,4 @@ end
 
 # AWS 배포
 gem 'figaro' # 각종 중요한 정보들이 외부에 노출되지 않도록 관리해주는 gem
-
+gem 'sqlite3'
