@@ -52,6 +52,11 @@ group :development do
   gem 'rails_db'
 end
 
-group :production do
-  gem 'pg', '~> 0.21'
-end
+# 헤로쿠 배포
+# group :production do
+#   gem 'pg', '~> 0.21'
+# end
+
+# AWS 배포
+gem 'figaro' # 각종 중요한 정보들이 외부에 노출되지 않도록 관리해주는 gem
+
